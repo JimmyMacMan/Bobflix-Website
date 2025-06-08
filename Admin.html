@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bobflix Home</title>
+    <link rel="icon" type="image/x-icon" href="imgr/favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        fetch('https://ac.bobflix.uk/', { mode: 'no-cors' })
+            .then(() => {
+                document.getElementById('ac-status').textContent = 'Online';
+                document.getElementById('ac-status').style.color = '#00e676';
+            })
+            .catch(() => {
+                document.getElementById('ac-status').textContent = 'Offline';
+                document.getElementById('ac-status').style.color = '#ff4444';
+            });
+    </script>
+</head>
+<body>
+    <div class="sidebar">
+        <nav>
+            <ul>
+                <li><a href="index.html">🏠 Home</a></li>
+                <li><a href="GameServers.html">🎮 Game Servers</a></li>
+                <li><a href="Admin.html">🛡️ Admin</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="container">
+        <div class="login-modal" id="loginModal">
+            <h2>Admin Login</h2>
+            <form id="loginForm" autocomplete="off">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Login</button>
+                <div class="error" id="loginError"></div>
+            </form>
+        </div>
+        <div id="adminContent" style="display:none;">
+            <div class="message">
+                <h1>Welcome, Admin!</h1>
+                <p>You are now logged in.</p>
+            </div>
+        </div>
+        <footer>
+            <a href="https://www.buymeacoffee.com/bobflix"><img src="https://img.buymeacoffee.com/button-api/?text=Donate / Updates&emoji=☕&slug=bobflix&button_colour=FF5F5F&font_colour=ffffff&font_family=Arial&outline_colour=000000&coffee_colour=FFDD00" /></a>
+        </footer>
+    </div>
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    const loginForm = document.getElementById('loginForm');
+    const loginError = document.getElementById('loginError');
+    const loginModal = document.getElementById('loginModal');
+    const adminContent = document.getElementById('adminContent');
+
+    // Plain text credentials
+    const validUsername = 'admin';
+    const validPassword = 'Windows9';
+
+    loginForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const username = document.getElementById('username').value.trim();
+        const password = document.getElementById('password').value;
+
+        if (username === validUsername && password === validPassword) {
+            loginModal.style.display = 'none';
+            adminContent.style.display = 'block';
+            // Show the external page in an iframe
+            adminContent.innerHTML = `
+                <div class="message">
+                    <h1>Welcome, Admin!</h1>
+                    <p>You are now logged in.</p>
+                </div>
+                <iframe src="http://100.118.115.67:81/" style="width:100%;height:80vh;border:none;border-radius:8px;background:#222;"></iframe>
+            `;
+        } else {
+            loginError.textContent = 'Invalid username or password.';
+        }
+    });
+});
+</script>
+</body>
+</html>

@@ -23,6 +23,8 @@ body {
             justify-content: center;
             min-height: 100vh;
             box-sizing: border-box;
+            transition: opacity 0.4s;
+            opacity: 1;
         }
         .message {
             background-color: #1f1f1f;
@@ -207,4 +209,16 @@ body {
     opacity: 0.3;
 
    
+}
+
+        /* Fade-out class */
+        .fade-out {
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+/* Fade-in class */
+.fade-in {
+    opacity: 1;
+    pointer-events: auto;
 }

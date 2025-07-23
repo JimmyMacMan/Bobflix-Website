@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         if (username === atob(validUsername) && password === atob(validPassword)) {
             // Redirect to another page after successful login
-            window.location.href = "http://100.118.115.67:81/"; // Change to your desired page
+            window.location.href = "https://dash.bobflix.uk/"; // Change to your desired page
         } else {
             loginError.textContent = 'Invalid username or password.';
         }

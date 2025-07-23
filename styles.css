@@ -1,9 +1,20 @@
-body {
+html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+      
+
+        body {
+            min-height: 100vh;
             margin: 0;
             font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
             background-color: #121212;
             color: #fff;
+            display: block; /* Remove flex centering */
         }
+
         header {
             text-align: center;
             padding: 30px 20px 10px;
@@ -14,15 +25,15 @@ body {
         }
         .container {
             max-width: 1000px;
-            margin: 0 auto;
+            width: 100%;
+            margin: 40px auto 0 auto; /* Center horizontally, add top margin */
             padding: 40px 20px;
-            margin-left: 200px;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            min-height: 100vh;
             box-sizing: border-box;
+           
         }
         .message {
             background-color: #1f1f1f;
@@ -49,6 +60,7 @@ body {
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
+            
         }
         .card {
             flex: 1 1 45%;
@@ -57,17 +69,21 @@ body {
             padding: 15px;
             text-align: center;
             box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+            border: 3px solid #ff4444; /* Add red border to cards */
+            
         }
         .card img {
             width: 100%;
             height: auto;
             border-radius: 8px;
             margin-bottom: 15px;
+            
         }
         .card a {
             color: #ff4444;
             text-decoration: none;
             word-break: break-word;
+            
         }
         footer {
             text-align: center;
@@ -118,7 +134,7 @@ body {
                 box-shadow: none;
                 padding-top: 0;
             }
-            .container {
+            .welcone-container {
                 margin-left: 0;
                 padding: 20px 5px;
                 min-height: unset;
@@ -176,4 +192,43 @@ body {
             color: #ff4444;
             margin-top: 10px;
             text-align: center;
+        }
+        .topbar {
+            background: #222;
+            padding: 1.2em 0;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            transition: opacity 0.4s;
+            opacity: 1;
+            border-bottom: 3px solid #ff4444; /* Add red line under top bar */
+        }
+
+        .topbar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .topbar li {
+            margin: 0 1em;
+        }
+
+        .topbar a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .topbar.animating {
+    opacity: 0.3;
+
+   
+}
+        .topbar.animating:hover {
+            opacity: 1;
+        }
+
+        .topbar a:hover {
+            color: #ff4444;
         }

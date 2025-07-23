@@ -5,38 +5,28 @@
     <title>Bobflix Home</title>
     <link rel="icon" type="image/x-icon" href="imgr/favicon.ico">
     <link rel="stylesheet" href="styles.css">
-    <script>
-        fetch('https://ac.bobflix.uk/live-timing', { mode: 'no-cors' })
-            .then(() => {
-                document.getElementById('ac-status').textContent = 'Online';
-                document.getElementById('ac-status').style.color = '#00e676';
-            })
-            .catch(() => {
-                document.getElementById('ac-status').textContent = 'Offline';
-                document.getElementById('ac-status').style.color = '#ff4444';
-            });
-    </script>
+    <script src="scipts.js"></script>
 </head>
+
 <body>
-    <!-- Sidebar -->
-    <div class="sidebar">
-        <nav>
-            <ul>
-                <li><a href="index.html">🏠 Home</a></li>
-                <li><a href="GameServers.html">🎮 Game Servers</a></li>
-                <li><a href="Admin.html">🛡️ Admin</a></li>
-            </ul>
-        </nav>
-    </div>
+    
+    <nav class="topbar">
+        <ul>
+            <li><a href="index.html">🏠 Home</a></li>
+            <li><a href="apps.html">🧩 Apps</a></li>
+            <li><a href="GameServers.html">🎮 Game Servers</a></li>
+            <li><a href="Admin.html">🛡️ Admin</a></li>
+        </ul>
+    </nav>
     <div class="container">
         <header>
             <img src="imgr/bobflix-dark-logo.png" alt="Bobflix Logo">
         </header>
         <!-- WIP Message -->
-        <div class="message">
+        <!-- <div class="message">
             <h1>Welcome to Bobflix</h1>
             <p>This is a WIP but here are all the links you'll need for <strong>Bobflix</strong>.</p>
-        </div>
+        </div> -->
         <img src="imgr/Error_welcome.jpg" alt="Welcome Image" class="main-image">
         <div class="cards">
             <div class="card">
@@ -47,10 +37,11 @@
                 <p>
                     <strong>Click for Assetto Corsa server</strong>
                     <br>
-                    <span id="ac-status" style="font-size: 14px; color: #ff4444;">Testing...</span>
+                    <!--<span id="ac-status" style="font-size: 14px; color: #ff4444;">Testing...</span> -->
                 </p>
                 <p><a href="https://ac.bobflix.uk/live-timing">https://ac.bobflix.uk/</a></p>
             </div>
+            
         </div>
         <!-- Donate-->
         <footer>

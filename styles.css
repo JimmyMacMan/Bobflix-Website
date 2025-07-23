@@ -20,8 +20,8 @@ html, body {
             padding: 30px 20px 10px;
         }
         header img {
-            max-width: 200px;
-            margin-bottom: 10px;
+            max-width: 450px;
+            margin-bottom: 20px;
         }
         .container {
             max-width: 1000px;
@@ -222,9 +222,7 @@ html, body {
 
         .topbar.animating {
     opacity: 0.3;
-
-   
-}
+        }
         .topbar.animating:hover {
             opacity: 1;
         }
@@ -232,3 +230,29 @@ html, body {
         .topbar a:hover {
             color: #ff4444;
         }
+
+        .slide-out {
+    animation: slideOutLeft 0.5s forwards;
+}
+
+@keyframes slideOutLeft {
+    to {
+        transform: translateX(-100vw);
+        opacity: 0;
+    }
+}
+
+.slide-in {
+    animation: slideInRight 0.5s;
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100vw);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

@@ -1,4 +1,3 @@
-// ----------------------------------------------------------------------------------------------------------
 // ac-status check
 const url = "https://ac.bobflix.uk";
 fetch("https://ac.bobflix.uk")
@@ -16,7 +15,7 @@ fetch("https://ac.bobflix.uk")
         document.getElementById('ac-status').textContent = 'Offline';
         document.getElementById('ac-status').style.color = '#ff4444';
     });
-// ----------------------------------------------------------------------------------------------------------
+
  // Admin login functionality   
 document.addEventListener('DOMContentLoaded', function() {
     const loginForm = document.getElementById('loginForm');
@@ -39,4 +38,3 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
-// ----------------------------------------------------------------------------------------------------------

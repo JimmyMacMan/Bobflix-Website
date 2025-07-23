@@ -57,6 +57,7 @@ html, body {
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
+            
         }
         .card {
             flex: 1 1 45%;
@@ -65,17 +66,21 @@ html, body {
             padding: 15px;
             text-align: center;
             box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+            border: 3px solid #ff4444; /* Add red border to cards */
+            
         }
         .card img {
             width: 100%;
             height: auto;
             border-radius: 8px;
             margin-bottom: 15px;
+            
         }
         .card a {
             color: #ff4444;
             text-decoration: none;
             word-break: break-word;
+            
         }
         footer {
             text-align: center;
@@ -126,7 +131,7 @@ html, body {
                 box-shadow: none;
                 padding-top: 0;
             }
-            .container {
+            .welcone-container {
                 margin-left: 0;
                 padding: 20px 5px;
                 min-height: unset;

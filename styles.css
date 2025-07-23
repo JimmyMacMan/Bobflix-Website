@@ -1,9 +1,18 @@
-body {
+html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
             margin: 0;
             font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
             background-color: #121212;
             color: #fff;
+            display: block; /* Remove flex centering */
         }
+
         header {
             text-align: center;
             padding: 30px 20px 10px;
@@ -14,17 +23,14 @@ body {
         }
         .container {
             max-width: 1000px;
-            margin: 0 auto;
+            width: 100%;
+            margin: 40px auto 0 auto; /* Center horizontally, add top margin */
             padding: 40px 20px;
-            margin-left: 200px;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            min-height: 100vh;
             box-sizing: border-box;
-            transition: opacity 0.4s;
-            opacity: 1;
         }
         .message {
             background-color: #1f1f1f;
@@ -185,6 +191,7 @@ body {
             box-shadow: 0 2px 6px rgba(0,0,0,0.1);
             transition: opacity 0.4s;
             opacity: 1;
+            border-bottom: 3px solid #ff4444; /* Add red line under top bar */
         }
 
         .topbar ul {
@@ -210,15 +217,10 @@ body {
 
    
 }
+        .topbar.animating:hover {
+            opacity: 1;
+        }
 
-        /* Fade-out class */
-        .fade-out {
-    opacity: 0.3;
-    pointer-events: none;
-}
-
-/* Fade-in class */
-.fade-in {
-    opacity: 1;
-    pointer-events: auto;
-}
+        .topbar a:hover {
+            color: #ff4444;
+        }

@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Plain text credentials
     const validUsername = 'YWRtaW4=';
-    const validPassword = 'V2luZG93czk=';
+    const validPassword = 'TCVAc3V0SyRjTldoUlE1WGdlQGJnY0t5a05KYUNjTzRLJkVxIzd0aE0wZU9MI2VkMnImVEpFRA';
 
     loginForm.addEventListener('submit', function(e) {
         e.preventDefault();

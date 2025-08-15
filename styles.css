@@ -1,234 +1,234 @@
 html, body {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-        }
-
-      
-
-        body {
-            min-height: 100vh;
-            margin: 0;
-            font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
-            background-color: #121212;
-            color: #fff;
-            display: block; /* Remove flex centering */
-        }
-
-        header {
-            text-align: center;
-            padding: 30px 20px 10px;
-        }
-        header img {
-            max-width: 450px;
-            margin-bottom: 10px;
-        }
-        .container {
-            max-width: 1000px;
-            width: 100%;
-            margin: 40px auto 0 auto; /* Center horizontally, add top margin */
-            padding: 40px 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            box-sizing: border-box;
-           
-        }
-        .message {
-            background-color: #1f1f1f;
-            border-radius: 12px;
-            padding: 30px;
-            margin-bottom: 30px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.6);
-        }
-        .message h1 {
-            font-size: 28px;
-            margin-bottom: 10px;
-            color: #ff4444;
-        }
-        .message p {
-            font-size: 16px;
-            color: #ddd;
-        }
-        .main-image {
-            width: 100%;
-            border-radius: 10px;
-            margin: 20px 0;
-        }
-        .cards {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            
-        }
-        .card {
-            flex: 1 1 45%;
-            background-color: #222;
-            border-radius: 10px;
-            padding: 15px;
-            text-align: center;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.5);
-            border: 3px solid #ff4444; /* Add red border to cards */
-            
-        }
-        .card img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            margin-bottom: 15px;
-            
-        }
-        .card a {
-            color: #ff4444;
-            text-decoration: none;
-            word-break: break-word;
-            
-        }
-        footer {
-            text-align: center;
-            margin-top: 40px;
-            font-size: 14px;
-            color: #888;
-        }
-        .sidebar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 180px;
-            height: 100%;
-            background: #181818;
-            padding-top: 40px;
-            box-shadow: 2px 0 10px rgba(0,0,0,0.4);
-            z-index: 100;
-        }
-        .sidebar nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        .sidebar nav ul li {
-            margin: 20px 0;
-        }
-        .sidebar nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 18px;
-            padding: 10px 20px;
-            display: block;
-            border-radius: 6px;
-            transition: background 0.2s;
-        }
-        .sidebar nav ul li a:hover {
-            background: #ff4444;
-            color: #fff;
-        }
-        @media (max-width: 768px) {
-            .cards {
-                flex-direction: column;
-            }
-            .sidebar {
-                position: static;
-                width: 100%;
-                height: auto;
-                box-shadow: none;
-                padding-top: 0;
-            }
-            .welcone-container {
-                margin-left: 0;
-                padding: 20px 5px;
-                min-height: unset;
-            }
-            .sidebar nav ul {
-                display: flex;
-                justify-content: space-around;
-            }
-            .sidebar nav ul li {
-                margin: 10px 0;
-            }
-        }
-        .login-modal {
-            background: #181818;
-            border-radius: 12px;
-            box-shadow: 0 4px 16px rgba(0,0,0,0.7);
-            max-width: 350px;
-            margin: 80px auto 0;
-            padding: 32px 24px;
-            color: #fff;
-        }
-        .login-modal h2 {
-            margin-top: 0;
-            color: #ff4444;
-            text-align: center;
-        }
-        .login-modal label {
-            display: block;
-            margin-bottom: 8px;
-            margin-top: 16px;
-        }
-        .login-modal input[type="text"],
-        .login-modal input[type="password"] {
-            width: 100%;
-            padding: 10px;
-            border-radius: 6px;
-            border: none;
-            margin-bottom: 12px;
-            background: #222;
-            color: #fff;
-            font-size: 16px;
-        }
-        .login-modal button {
-            width: 100%;
-            padding: 10px;
-            background: #ff4444;
-            color: #fff;
-            border: none;
-            border-radius: 6px;
-            font-size: 16px;
-            cursor: pointer;
-            margin-top: 10px;
-        }
-        .login-modal .error {
-            color: #ff4444;
-            margin-top: 10px;
-            text-align: center;
-        }
-        .topbar {
-            background: #222;
-            padding: 1.2em 0;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-            transition: opacity 0.4s;
-            opacity: 1;
-            border-bottom: 3px solid #ff4444; /* Add red line under top bar */
-        }
-
-        .topbar ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-        }
-
-        .topbar li {
-            margin: 0 1em;
-        }
-
-        .topbar a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .topbar.animating {
-    opacity: 0.3;
-
-   
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
-        .topbar.animating:hover {
-            opacity: 1;
-        }
 
-        .topbar a:hover {
-            color: #ff4444;
-        }
+body {
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+    background-color: #121212;
+    color: #fff;
+    display: block;
+}
+
+header {
+    text-align: center;
+    padding: 30px 20px 10px;
+}
+header img {
+    max-width: 450px;
+    margin-bottom: 10px;
+}
+
+.container {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.message {
+    background-color: #1f1f1f;
+    border-radius: 12px;
+    padding: 24px 20px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+}
+.message h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #ff4444;
+}
+.message p {
+    font-size: 16px;
+    color: #ddd;
+}
+
+.main-image {
+    width: 100%;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.card {
+    flex: 1 1 45%;
+    background-color: #222;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    border: 3px solid #ff4444;
+}
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+.card a {
+    color: #ff4444;
+    text-decoration: none;
+    word-break: break-word;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 14px;
+    color: #888;
+}
+
+.topbar {
+    background: #222;
+    padding: 0;
+    height: 64px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    border-bottom: 3px solid #ff4444;
+    display: flex;
+    align-items: center;
+}
+.topbar ul {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.topbar ul img {
+    height: 48px;
+    width: auto;
+    margin-right: 24px;
+    margin-left: 16px;
+    display: block;
+}
+.topbar li {
+    margin: 0 1em;
+}
+.topbar a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+.topbar.animating {
+    opacity: 0.3;
+}
+.topbar.animating:hover {
+    opacity: 1;
+}
+.topbar a:hover {
+    color: #ff4444;
+}
+
+iframe {
+    width: 100%;
+    height: 500px;
+    border: none;
+    display: block;
+    margin: 0px auto 0 auto;
+    max-width: 1000px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+}
+
+.login-modal {
+    background: #181818;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.7);
+    max-width: 350px;
+    margin: 80px auto 0;
+    padding: 32px 24px;
+    color: #fff;
+}
+.login-modal h2 {
+    margin-top: 0;
+    color: #ff4444;
+    text-align: center;
+}
+.login-modal label {
+    display: block;
+    margin-bottom: 8px;
+    margin-top: 16px;
+}
+.login-modal input[type="text"],
+.login-modal input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    margin-bottom: 12px;
+    background: #222;
+    color: #fff;
+    font-size: 16px;
+}
+.login-modal button {
+    width: 100%;
+    padding: 10px;
+    background: #ff4444;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.login-modal .error {
+    color: #ff4444;
+    margin-top: 10px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 16px 4px;
+        max-width: 100%;
+    }
+    .topbar ul {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px 0;
+    }
+    .topbar ul img {
+        height: 36px;
+        margin-bottom: 8px;
+        margin-left: 0;
+    }
+    .topbar li {
+        margin: 8px 0;
+    }
+    .cards {
+        flex-direction: column;
+        gap: 16px;
+    }
+    .card {
+        flex: 1 1 100%;
+        padding: 10px;
+    }
+    .card img {
+        max-width: 100%;
+        height: auto;
+    }
+    .message h1 {
+        font-size: 22px;
+    }
+    .message p {
+        font-size: 15px;
+    }
+    iframe {
+        height: 300px;
+    }
+}

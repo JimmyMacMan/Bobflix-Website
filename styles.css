@@ -10,7 +10,9 @@ body {
     font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
     background-color: #121212;
     color: #fff;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
 }
 
 header {
@@ -87,9 +89,12 @@ header img {
 
 footer {
     text-align: center;
-    margin-top: 40px;
+    margin-top: 0;
     font-size: 14px;
     color: #888;
+    background: #222;
+    padding: 16px 0;
+    border-top: 3px solid #ff4444;
 }
 
 .topbar {
@@ -134,15 +139,23 @@ footer {
     color: #ff4444;
 }
 
+.iframe-wrapper {
+    flex: 1 1 auto;
+    width: 100vw;
+    height: 100%;
+    display: flex;
+}
+
 iframe {
-    width: 100%;
-    height: 500px;
+    width: 100vw;
+    height: 100%;
     border: none;
     display: block;
-    margin: 0px auto 0 auto;
-    max-width: 1000px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+    background: #000;
+    flex: 1 1 auto;
 }
 
 .login-modal {

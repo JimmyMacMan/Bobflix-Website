@@ -1,22 +1,4 @@
-// ac-status check
-const url = "https://ac.bobflix.uk";
-fetch("https://ac.bobflix.uk")
-    .then(response => response.text())
-    .then(text => {
-        if (text.includes("Bad gateway")) {
-            document.getElementById('ac-status').textContent = 'Offline';
-            document.getElementById('ac-status').style.color = '#ff4444';
-        } else {
-            document.getElementById('ac-status').textContent = 'Online';
-            document.getElementById('ac-status').style.color = '#00e676';
-        }
-    })
-    .catch(() => {
-        document.getElementById('ac-status').textContent = 'Offline';
-        document.getElementById('ac-status').style.color = '#ff4444';
-    });
-
- // Admin login functionality   
+// Admin login functionality   
 document.addEventListener('DOMContentLoaded', function() {
     const loginForm = document.getElementById('loginForm');
     const loginError = document.getElementById('loginError');
@@ -25,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const validUsername = 'YWRtaW4=';
     const validPassword = 'TCVAc3V0SyRjTldoUlE1WGdlQGJnY0t5a05KYUNjTzRLJkVxIzd0aE0wZU9MI2VkMnImVEpFRA';
 
-    loginForm.addEventListener('submit', function(e) {
+    loginForm.addEventListener('login', function(e) {
         e.preventDefault();
         const username = document.getElementById('username').value.trim();
         const password = document.getElementById('password').value;
